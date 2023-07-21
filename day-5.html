@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Change</title>
+</head>
+<body>
+  <!-- <h1>Click the button to change the background color!</h1>
+  <button id="colorChangeButton">Change Color</button>
+
+  <script>
+   
+    const colorChangeButton = document.getElementById("colorChangeButton");
+    colorChangeButton.addEventListener("click", changeBackgroundColor);
+
+    function changeBackgroundColor() {
+      
+      const body = document.body;
+
+     
+      body.style.backgroundColor = "#000000";
+    }
+  </script> -->
+
+  <h1>My List</h1>
+  <input type="text" id="inputField" placeholder="Enter your item">
+  <button id="addButton">Add to List</button>
+  <ul id="myList"></ul>
+
+  <script>
+   
+// Get the input field and the button element
+const inputField = document.getElementById("inputField");
+const addButton = document.getElementById("addButton");
+const myList = document.getElementById("myList");
+
+// Function to add a new list item to the unordered list
+function addItemToList() {
+  const newItemText = inputField.value.trim();
+
+  if (newItemText !== "") {
+    const listItem = document.createElement("li");
+    listItem.textContent = newItemText;
+    myList.appendChild(listItem);
+    inputField.value = ""; // Clear the input field after adding the item
+  }
+}
+
+// Add event listener to the button to call the function when clicked
+addButton.addEventListener("click", addItemToList);
+</script>
+</body>
+</html>
